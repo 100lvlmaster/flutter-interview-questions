@@ -202,6 +202,8 @@ Flutter uses only the canvas of the native platform and draws the UI and all the
 
 A stream is like a pipe, you put a value on the one end and if there’s a listener on the other end that listener will receive that value. A Stream can have multiple listeners and all of those listeners will receive the same value when it’s put in the pipeline. The way you put values on a stream is by using a StreamController
 
+---
+
 8.What are `keys` in Flutter and when should you use it?
 
 You don't need to use Keys most of the time, the framework handles it for you and uses them internally to differentiate between widgets. There are a few cases where you may need to use them though.
@@ -220,7 +222,7 @@ https://www.youtube.com/watch?v=kn0EOS-ZiIc&feature=emb_title
 
 ---
 
-10.when should we use a `resizeToAvoidBottomInset`?
+9.when should we use a `resizeToAvoidBottomInset`?
 
 If true the body and the scaffold's floating widgets should size themselves to avoid the onscreen keyboard whose height is defined by the ambient MediaQuery's MediaQueryData.viewInsets bottom property.
 
@@ -232,25 +234,35 @@ https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/316760/7da984e6-ec32
 `without resizeToAvoidBottomInset`
 https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/316760/0c933d45-82a2-4401-836c-d1c6f5abc2db.gif
 
-11.What is the difference between `as`,`show` and `hide` in an import statement?
+---
+
+10.What is the difference between `as`,`show` and `hide` in an import statement?
 
 <img src='img/as.png' alt="as"/>
 
-12.What is the importance of a `TextEditingController`?
+---
+
+11.What is the importance of a `TextEditingController`?
 
 Whenever the user modifies a text field with an associated TextEditingController, the text field updates value and the controller notifies its listeners. Listeners can then read the text and selection properties to learn what the user has typed or how the selection has been updated
 
-13.How is an `Inherited Widget` different from a `Provider`?
+---
+
+12.How is an `Inherited Widget` different from a `Provider`?
 
 Provider basically takes the logic of InheritedWidgets, but reduce the boilerplate to the strict minimum
 
-14.What is an `UnmodifiableListView`?
+---
+
+13.What is an `UnmodifiableListView`?
 
 Cannot change the list items by adding or removing
 
 https://github.com/filiph/state_experiments/issues/5
 
-15.Difference between these operators `??` and `?.`
+---
+
+14.Difference between these operators `??` and `?.`
 
 `??`
 expr1 ?? expr2
@@ -260,42 +272,46 @@ If expr1 is non-null, returns its value; otherwise, evaluates and returns the va
 
 https://dart.dev/guides/language/language-tour
 
-16.Difference between a Single Instance and Scoped Instance ?
+---
+
+# Expert
+
+1.Difference between a Single Instance and Scoped Instance ?
 
 https://codewithandrea.com/articles/2019-06-10-global-access-vs-scoped-access/
 
-17.Difference between getDocuments() vs snapshots() in Firestore?
+2.Difference between getDocuments() vs snapshots() in Firestore?
 
 <img src='https://github.com/power19942/flutter-interview-questions/blob/main/img/getDocuments.png' alt="getDocuments"/>
 
-18.What is a `vsync`?
+3.What is a `vsync`?
 
 Vsync basically keeps the track of screen, so that Flutter does not renders the animation when the screen is not being displayed
 
-19.Difference between `AnimationController` and `Animation`?
+4.Difference between `AnimationController` and `Animation`?
 
 AnimationController is for how long the animation would be and how to control from time, upper and lower boundary, how to control data with time, length, sequence, etc. while AnimationTween is for the range of animation with time, colour, range, sequence, etc as long the animation would be while
 
-20.When do you use the `WidgetsBindingObserver`?
+5.When do you use the `WidgetsBindingObserver`?
 
 To check when the system puts the app in the background or returns the app to the foreground
 
-21.What do you know about Dart `Isolates`?
+6.What do you know about Dart `Isolates`?
 
 To gain concurrency Dart makes use of the Isolates method which works on its own without sharing memory but uses passing or message communication.
 
-22.`Stream` vs `Future`?
+7.`Stream` vs `Future`?
 
 The difference is that Futures are about one-shot request/response (I ask, there is a delay, I get a notification that my Future is ready to collect, and I'm done!) whereas Streams are a continuous series of responses to a single request (I ask, there is a delay, then I keep getting responses until the stream dries up or I decide to close it and walk away)
 
-23.What's the difference between `async` and `async*` in Dart?
+8.What's the difference between `async` and `async*` in Dart?
 
 <img src='img/async.png' alt="async"/>
 
-24.What does `non-nullable` by default mean?
+9.What does `non-nullable` by default mean?
 
 <img src='https://github.com/power19942/flutter-interview-questions/blob/main/img/no_null.png' alt="no_null"/>
 
-25.Why is `exit(0)` not preferred for closing an app?
+19.Why is `exit(0)` not preferred for closing an app?
 
 <img src='img/exit0.png' alt="exit0"/>
