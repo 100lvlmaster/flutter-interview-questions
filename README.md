@@ -312,6 +312,10 @@ The difference is that Futures are about one-shot request/response (I ask, there
 
 <img src='https://github.com/power19942/flutter-interview-questions/blob/main/img/no_null.png' alt="no_null"/>
 
-19.Why is `exit(0)` not preferred for closing an app?
+10.Why is `exit(0)` not preferred for closing an app?
 
 <img src='img/exit0.png' alt="exit0"/>
+
+11.What are generators in flutter?
+
+In Dart, a generator is a unique function that allows the user to produce a value sequence easily. Generators return values on demand when we try to iterate over them.
